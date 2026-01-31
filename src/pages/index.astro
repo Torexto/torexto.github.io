@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from "../views/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import DarkContainer from "../components/DarkContainer.astro";
+import LightContainer from "../components/LightContainer.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Navbar />
+  <LightContainer>
+    <h1 class="text-4xl text-stone-200">Witaj na mojej stronie!</h1>
+    <p class="text-stone-800 mt-4">
+      Tutaj znajdziesz informacje o mnie oraz moje projekty.
+    </p>
+  </LightContainer>
+  <DarkContainer>
+    <p class="text-stone-300">
+      Skontaktuj się ze mną poprzez formularz kontaktowy lub media
+      społecznościowe.
+    </p>
+  </DarkContainer>
 </Layout>
